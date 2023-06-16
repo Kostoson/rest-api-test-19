@@ -1,0 +1,5 @@
+*Request URI:	https://reqres.in/api/login
+HTTP/1.1 400 Bad Request
+{
+)    "error": "Missing email or username"
+}
