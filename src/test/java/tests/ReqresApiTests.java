@@ -13,6 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static specs.Specs.*;
 
 
 public class ReqresApiTests {
@@ -25,16 +26,11 @@ public class ReqresApiTests {
     void checkEmailForExistingSingleUser() {
         String email = "janet.weaver@reqres.in";
         SingleUserResponse response = step("Make the request", () ->
-
-                given()
-                        .log().uri()
-                        .contentType(JSON)
+                given(requestSpec)
                         .when()
-                        .get(reqresInUri + "users/2")
+                        .get("/users/2")
                         .then()
-                        .log().status()
-                        .log().body()
-                        .statusCode(200)
+                        .spec(response200)
                         .body(matchesJsonSchemaInClasspath("jsonschemes/single-user-json-schema.json"))
                         .extract().as(SingleUserResponse.class));
         step("Check name in response", () ->
@@ -47,14 +43,13 @@ public class ReqresApiTests {
     void checkEmailForDoesNotExistingSingleUser() {
         RestAssured.filters(new AllureRestAssured());
         step("Make the request and checking status code", () ->
-        given()
+        given(requestSpec)
                 .log().uri()
                 .contentType(JSON)
                 .when()
-                .get(reqresInUri + "users/133")
+                .get("/users/133")
                 .then()
-                .log().status()
-                .statusCode(404));
+                .spec(response404SingleUser));
     }
 
     @Test
@@ -66,16 +61,12 @@ public class ReqresApiTests {
         createRequestBody.setJob("QA");
         CreateResponseBody createResponseBody = step("Make the request", () ->
 
-        given()
-                .log().uri()
-                .contentType(JSON)
+        given(requestSpec)
                 .body(createRequestBody)
                 .when()
                 .post(reqresInUri + "users")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(201)
+                .spec(response201CreateUser)
                 .body(matchesJsonSchemaInClasspath("jsonschemes/create-json-schema.json"))
                 .extract().as(CreateResponseBody.class));
         step("Check name in response", () ->
@@ -99,16 +90,12 @@ public class ReqresApiTests {
         loginRequestBody.setPassword("cityslicka");
         LoginResponseBody loginResponseBody = step("Make the request", () ->
 
-                given()
-                        .log().uri()
-                        .contentType(JSON)
+                given(requestSpec)
                         .body(loginRequestBody)
                         .when()
                         .post(reqresInUri + "login")
                         .then()
-                        .log().status()
-                        .log().body()
-                        .statusCode(200)
+                        .spec(response200)
                         .extract().as(LoginResponseBody.class));
 
         step("Check token in response", () ->
@@ -125,16 +112,12 @@ public class ReqresApiTests {
         LoginRequestBodyWithoutEmail requestBody = new LoginRequestBodyWithoutEmail();
         requestBody.setPassword("cityslicka");
         LoginResponseBodyWithoutEmail responseBody = step("Make the request", () ->
-        given()
-                .log().uri()
-                .contentType(JSON)
+        given(requestSpec)
                 .body(requestBody)
                 .when()
                 .post(reqresInUri + "login")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(400)
+                .spec(response400CreateUser)
                 .extract().as(LoginResponseBodyWithoutEmail.class));
 
         step("Check error in response", () ->

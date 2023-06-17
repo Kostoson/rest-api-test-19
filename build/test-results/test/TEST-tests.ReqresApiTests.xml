@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ReqresApiTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-17T14:29:07" hostname="DESKTOP-IQVJM0R" time="7.526">
+<testsuite name="tests.ReqresApiTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-17T19:49:18" hostname="DESKTOP-IQVJM0R" time="11.856">
   <properties/>
-  <testcase name="checking the email of an existing user" classname="tests.ReqresApiTests" time="7.526"/>
-  <system-out><![CDATA[Request URI:	https://reqres.in/api/users/2
-HTTP/1.1 200 OK
+  <testcase name="Login user without email in request body" classname="tests.ReqresApiTests" time="11.856"/>
+  <system-out><![CDATA[Request URI:	https://reqres.in/api/login
+Body:
 {
-    "data": {
-        "id": 2,
-        "email": "janet.weaver@reqres.in",
-        "first_name": "Janet",
-        "last_name": "Weaver",
-        "avatar": "https://reqres.in/img/faces/2-image.jpg"
-    },
-    "support": {
-        "url": "https://reqres.in/#support-heading",
-        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-    }
+    "password": "cityslicka"
+}
+{
+    "error": "Missing email or username"
 }
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
