@@ -42,6 +42,12 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:$jupiterVersion'
 }
 
-task test(type: Test) {
+test {
     useJUnitPlatform()
+}
+
+task test(type: Test) {
+    useJUnitPlatform{
+        includeTags("remote")
+    }
 }
