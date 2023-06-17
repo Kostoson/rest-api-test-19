@@ -1,8 +1,0 @@
-*Request URI:	https://reqres.in/api/login
-Body:
-{
-    "password": "cityslicka"
-}
-{
-)    "error": "Missing email or username"
-}
