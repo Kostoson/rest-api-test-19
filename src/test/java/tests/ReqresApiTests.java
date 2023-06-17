@@ -15,7 +15,7 @@ import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
-
+@Tag("remote")
 public class ReqresApiTests {
 
     @Test
