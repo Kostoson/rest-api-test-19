@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ReqresApiTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-17T20:41:05" hostname="DESKTOP-IQVJM0R" time="12.196">
+  <properties/>
+  <testcase name="Create user" classname="tests.ReqresApiTests" time="12.196"/>
+  <system-out><![CDATA[Request URI:	https://reqres.in/api/users
+Body:
+{
+    "name": "Konstantin",
+    "job": "QA"
+}
+{
+    "name": "Konstantin",
+    "job": "QA",
+    "id": "476",
+    "createdAt": "2023-06-17T20:41:15.485Z"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
