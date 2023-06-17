@@ -15,7 +15,7 @@ import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
-@Tag("remote")
+
 public class ReqresApiTests {
 
     @Test
@@ -62,7 +62,7 @@ public class ReqresApiTests {
         given(requestSpec)
                 .body(createRequestBody)
                 .when()
-                .post(reqresInUri + "users")
+                .post("/users")
                 .then()
                 .spec(response201CreateUser)
                 .body(matchesJsonSchemaInClasspath("jsonschemes/create-json-schema.json"))
@@ -91,7 +91,7 @@ public class ReqresApiTests {
                 given(requestSpec)
                         .body(loginRequestBody)
                         .when()
-                        .post(reqresInUri + "login")
+                        .post("/login")
                         .then()
                         .spec(response200)
                         .extract().as(LoginResponseBody.class));
@@ -113,7 +113,7 @@ public class ReqresApiTests {
         given(requestSpec)
                 .body(requestBody)
                 .when()
-                .post(reqresInUri + "login")
+                .post("/login")
                 .then()
                 .spec(response400CreateUser)
                 .extract().as(LoginResponseBodyWithoutEmail.class));
