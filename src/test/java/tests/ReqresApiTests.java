@@ -18,8 +18,6 @@ import static specs.Specs.*;
 
 public class ReqresApiTests {
 
-    String reqresInUri = "https://reqres.in/api/";
-
     @Test
     @Tag("Positive")
     @DisplayName("checking the email of an existing user")
