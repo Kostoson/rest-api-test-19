@@ -12,15 +12,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 
-public class LoginTests {
-    String login = "qa@qa.guru",
-            password = "qa@qa.guru1";
-
-    @BeforeAll
-    static void setup() {
-        Configuration.baseUrl = "https://demowebshop.tricentis.com";
-        RestAssured.baseURI = "https://demowebshop.tricentis.com";
-    }
+public class LoginTests extends TestBase{
 
     @Test
     void loginWithUITest() {
