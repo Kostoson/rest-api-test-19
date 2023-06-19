@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.demowebshop.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-19T16:18:29" hostname="DESKTOP-E78FPDL" time="6.066">
+  <properties/>
+  <testcase name="loginWithApiTest()" classname="tests.demowebshop.LoginTests" time="6.066"/>
+  <system-out><![CDATA[HTTP/1.1 302 Found
+Content-Length: 118
+Content-Type: text/html; charset=utf-8
+Date: Mon, 19 Jun 2023 16:18:29 GMT
+Server: Microsoft-IIS/10.0
+Cache-Control: private
+Location: /
+Set-Cookie: Nop.customer=46b38f30-bbd7-435d-9bb5-11ce9daf23ec; expires=Tue, 18-Jun-2024 16:18:29 GMT; path=/; HttpOnly
+Set-Cookie: NOPCOMMERCE.AUTH=0B0942C0285BFFD770882C6500F5CA42B2612DD658262B3C3DA7C7582EC8BA08E69752ECCE43C914B3CEB624047F4E82E8ED878EA4DF77AE0E1558BF560D94E56416DAE926AB0F7AFA89D06B2E2DA9D9F384E1868D20939C9527D26BBE29C9113A0BF6B5097FD1335ABCF07446AE0B7AFABA4BEA3711A88AE1065A17F902D805; path=/; HttpOnly
+Set-Cookie: ARRAffinity=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;Secure;Domain=demowebshop.tricentis.com
+Set-Cookie: ARRAffinitySameSite=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;SameSite=None;Secure;Domain=demowebshop.tricentis.com
+X-AspNetMvc-Version: 5.2
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+
+<html>
+  <head>
+    <title>Object moved</title>
+  </head>
+  <body>
+    <h2>
+Object moved to       <a shape="rect" href="/">here</a>
+.    </h2>
+  </body>
+</html>
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: D:\My Java Project\rest-api-test-19\build\downloads\1687191511077_8768_1
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 114.0.5735.90 (resolved driver for Chrome 114)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\User\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 9355
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+июн. 19, 2023 7:18:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 114, so returning the closest version found: 113
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=114.0.5735.134 Platform=windows
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.15.0
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.9.1 build revision: eb2032df7f
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on windows (a328fb487e4ba3af22a646f66f11a53b)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on windows (a328fb487e4ba3af22a646f66f11a53b),proxy=null,downloadsFolder=D:\My Java Project\rest-api-test-19\build\downloads\1687191511077_8768_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+]]></system-err>
+</testsuite>

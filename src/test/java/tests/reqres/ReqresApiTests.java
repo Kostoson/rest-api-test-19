@@ -1,4 +1,4 @@
-package tests;
+package tests.reqres;
 
 
 import io.qameta.allure.restassured.AllureRestAssured;
