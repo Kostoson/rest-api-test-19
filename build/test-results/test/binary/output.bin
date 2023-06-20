@@ -1,12 +1,12 @@
 HTTP/1.1 302 Found
 Content-Length: 118
 (Content-Type: text/html; charset=utf-8
-%Date: Tue, 20 Jun 2023 10:21:20 GMT
+%Date: Tue, 20 Jun 2023 11:52:55 GMT
 Server: Microsoft-IIS/10.0
 Cache-Control: private
 Location: /
-xSet-Cookie: Nop.customer=ac71b2fc-1bff-4603-8b38-b64a5b5b0a02; expires=Wed, 19-Jun-2024 10:21:21 GMT; path=/; HttpOnly
-±Set-Cookie: NOPCOMMERCE.AUTH=AE7115C5A2C423829268B7C74964EC90CB8C3E0722723D8E2FEBF33A1E6AC00EC8889059707940DC03C083D85BBFDB625CC2F42E40FF3D2BB97006BB58D8EB466E03D6A236724A7E908BF44809C7A54168A784D32F6C49B22931AF220C1D126EF7BDDC807C07994778CFDA9B87917167ADEC73F33217229B6FE5BE66D168E2AA; path=/; HttpOnly
+xSet-Cookie: Nop.customer=db4a81f9-443b-4c30-9a3c-1cf17e8554e4; expires=Wed, 19-Jun-2024 11:52:56 GMT; path=/; HttpOnly
+±Set-Cookie: NOPCOMMERCE.AUTH=6D54AD23969D5A0704FE464A280B7CC88C4A1075EEE31F0B9B2E13AB94983DB01AAA94E9F8022D88F3F71486BE27FE8360645F3E044104D7B14E0F035B9FBF0B2479B44C99E02BAC97D1CF59B2DB07F7B9239ADCAE117D8EE16CC3A51B9A48CB6DFEBC4A29D4D1B4F8DAC46D841032205AFB935AA4BCC9B5D089C5B1E443C674; path=/; HttpOnly
 ’Set-Cookie: ARRAffinity=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;Secure;Domain=demowebshop.tricentis.com
 ¨Set-Cookie: ARRAffinitySameSite=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;SameSite=None;Secure;Domain=demowebshop.tricentis.com
 X-AspNetMvc-Version: 5.2
@@ -25,24 +25,29 @@
 
   </body>
 	</html>
-HTTP/1.1 200 OK
-Content-Length: 937
-/Content-Type: application/json; charset=utf-8
-%Date: Tue, 20 Jun 2023 10:21:21 GMT
+HTTP/1.1 302 Found
+Content-Length: 136
+(Content-Type: text/html; charset=utf-8
+%Date: Tue, 20 Jun 2023 11:52:56 GMT
 Server: Microsoft-IIS/10.0
 Cache-Control: private
-Content-Encoding: gzip
-xSet-Cookie: Nop.customer=e19e9757-e268-464c-870c-e8cd1cc7a9f8; expires=Wed, 19-Jun-2024 10:21:21 GMT; path=/; HttpOnly
+Location: /customer/addresses
+xSet-Cookie: Nop.customer=e19e9757-e268-464c-870c-e8cd1cc7a9f8; expires=Wed, 19-Jun-2024 11:52:57 GMT; path=/; HttpOnly
 ’Set-Cookie: ARRAffinity=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;Secure;Domain=demowebshop.tricentis.com
 ¨Set-Cookie: ARRAffinitySameSite=c87cfca9533fb6ed9073f5953c272e806d3ffcecff688cd52364c911623ea2a0;Path=/;HttpOnly;SameSite=None;Secure;Domain=demowebshop.tricentis.com
-Vary: Accept-Encoding
 X-AspNetMvc-Version: 5.2
 X-AspNet-Version: 4.0.30319
 X-Powered-By: ASP.NET
 
-{
-    "success": true,
-Y    "message": "The product has been added to your <a href=\"/cart\">shopping cart</a>",
-'    "updatetopcartsectionhtml": "(3)",
-§    "updateflyoutcartsectionhtml": "<div id=\"flyout-cart\" class=\"flyout-cart\">\r\n    <div class=\"mini-shopping-cart\">\r\n        <div class=\"count\">\r\nThere are <a href=\"/cart\" class=\"items\">3 item(s)</a> in your cart.        </div>\r\n            <div class=\"items\">\r\n                    <div class=\"item first\">\r\n                            <div class=\"picture\">\r\n                                <a href=\"/build-your-own-computer\" title=\"Show details for Build your own computer\">\r\n                                    <img alt=\"Picture of Build your own computer\" src=\"https://demowebshop.tricentis.com/content/images/thumbs/0000031_build-your-own-computer_47.jpeg\" title=\"Show details for Build your own computer\" />\r\n                                </a>\r\n                            </div>\r\n                        <div class=\"product\">\r\n                            <div class=\"name\">\r\n                                <a href=\"/build-your-own-computer\">Build your own computer</a>\r\n                            </div>\r\n                                <div class=\"attributes\">\r\n                                    Processor: 2.5 GHz Intel Pentium Dual-Core E2200 [+15.00]<br />RAM: 2 GB<br />HDD: 400 GB [+100.00]<br />OS: Ubuntu<br />Software: Microsoft Office [+50.00]\r\n                                </div>\r\n                            <div class=\"price\">Unit price: <span>1365.00</span></div>\r\n                            <div class=\"quantity\">Quantity: <span>3</span></div>\r\n                        </div>\r\n                    </div>\r\n            </div>\r\n            <div class=\"totals\">Sub-Total: <strong>4095.00</strong></div>\r\n            <div class=\"buttons\">\r\n                    <input type=\"button\" value=\"Go to cart\" class=\"button-1 cart-button\" onclick=\"setLocation('/cart')\" />\r\n                            </div>\r\n    </div>\r\n</div>\r\n"
-}
+<html>
+	  <head>
+     <title>Object moved</title>
+
+  </head>
+	  <body>
+	    <h2>
+JObject moved to       <a shape="rect" href="/customer/addresses">here</a>
+.    </h2>
+
+  </body>
+	</html>
