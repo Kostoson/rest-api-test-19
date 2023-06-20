@@ -1,16 +1,22 @@
 package tests.demowebshop;
 
 import com.codeborne.selenide.Configuration;
+import config.AppConfig;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
-    String login = "qa@qa.guru",
-            password = "qa@qa.guru1";
+
+    static AppConfig config = ConfigFactory.create(AppConfig.class, System.getProperties());
+    String login = config.getLogin(),
+            password = config.getPassword(),
+    authCookieKey = "NOPCOMMERCE.AUTH";
+    AuthApi authApi = new AuthApi();
 
     @BeforeAll
     static void setup() {
-        Configuration.baseUrl = "https://demowebshop.tricentis.com";
-        RestAssured.baseURI = "https://demowebshop.tricentis.com";
+        Configuration.baseUrl = config.getBaseUrl();
+        RestAssured.baseURI = config.getBaseUrl();
     }
 }

@@ -1,11 +1,8 @@
 package tests.demowebshop;
 
-import io.restassured.RestAssured;
-import org.openqa.selenium.Cookie;
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
+import org.openqa.selenium.Cookie;
+import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -30,7 +27,6 @@ public class LoginTests extends TestBase{
     @Test
     void loginWithApiTest() {
         step("Get cookie by api and set it to browser", () -> {
-            String authCookieKey = "NOPCOMMERCE.AUTH";
             String authCookieValue = given()
                     .headers("Content-Type", "application/x-www-form-urlencoded")
                     .formParam("Email", login)
