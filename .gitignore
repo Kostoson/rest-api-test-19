@@ -25,5 +25,6 @@ hs_err_pid*
 #other
 /.idea
 /.gradle
-build/reports
+gradle/
+build/
 notifications/draft.txt
